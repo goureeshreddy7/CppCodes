@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef vector<long long> vl;
+typedef pair<int,int> pi;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll x,y;cin>>x>>y;
+    if(abs(x-y)<=2){
+        cout<<"Interesting";
+    }else{
+        cout<<"Boring";
+    }
+    
+}
