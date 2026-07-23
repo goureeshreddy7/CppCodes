@@ -1,25 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef vector<int> vi;
 typedef vector<long long> vl;
 typedef pair<int,int> pi;
-#define push_back pb;
 
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int t;cin>>t;
+    ll t;cin>>t;
     while(t--){
-        ll n,m,a,b;cin>>n>>m>>a>>b;
-        if(gcd(n,a)==1&&gcd(m,b)==1&&gcd(m,n)<=2){
+        ll n,k,x;cin>>n>>k>>x;
+        if(x<=(n*(n+1)/2)-((n-k)*(n-k+1)/2)&&x>=k*(k+1)/2){
             cout<<"YES\n";
         }else{
             cout<<"NO\n";
         }
-       
     }
-    
-    
-}   
+
+
+}

@@ -8,6 +8,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-
-
+    ll t;cin>>t;
+    while(t--){
+        ll x,y;cin>>x>>y;
+        if(x%y==0) cout<<"YES\n";
+        else cout<<"NO\n";
+    }
+    
 }

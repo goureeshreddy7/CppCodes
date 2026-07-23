@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run C++",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "g++ ${file} -o a.exe && a.exe && del a.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
