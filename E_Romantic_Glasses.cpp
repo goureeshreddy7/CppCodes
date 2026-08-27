@@ -9,12 +9,21 @@ int main(){
     ll t;cin>>t;
     while(t--){
         ll n;cin>>n;
-        vl a(n+1);
-        for(ll i=1;i<n+1;i++){
+        vl a(n);
+        set<ll> s;
+        s.insert(0);
+        ll pres=0;
+        for(ll i=0;i<n;i++){
             cin>>a[i];
-            if(i%2==0){
-                
+            if(i%2!=0){
+                a[i]=a[i]-(2*a[i]);
             }
+            pres+=a[i];
+            s.insert(pres);
         }
+        if(s.size()!=n+1) cout<<"YES\n";
+        else cout<<"NO\n";
+
+        
     }
 }
