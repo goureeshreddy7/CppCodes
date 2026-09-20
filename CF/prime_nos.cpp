@@ -3,14 +3,19 @@ using namespace std;
 typedef long long ll;
 typedef vector<long long> vl;
 
+vl is_prime(10001,1);
 void solve(){
-    ll n;cin>>n;
-    string s;
-    cin>>s;ll sum=0;
-    for(ll i=0;i<s.length();i++){
-        sum+=s[i]-'0';
+    ll n=10000;
+    for(ll i=2;i<=n;i++){
+        if(is_prime[i]){
+            for(ll j=2*i;j<=n;j=j+i){
+                is_prime[j]=0;
+            }
+        }
     }
-    cout<<sum<<"\n";
+    ll x;cin>>x;
+    if(is_prime[x]) cout<<"YES";
+    else cout<<"NO";
 }
 
 

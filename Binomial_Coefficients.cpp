@@ -4,6 +4,7 @@ typedef long long ll;
 typedef vector<long long> vl;
 
 void solve(){
+    ll a,b;cin>>a>>b;
     
 }
 

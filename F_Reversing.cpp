@@ -1,25 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef vector<long long> vl;
-
 void solve(){
     ll n;cin>>n;
-    string s;
-    cin>>s;ll sum=0;
-    for(ll i=0;i<s.length();i++){
-        sum+=s[i]-'0';
+    stack<ll> s;
+    for(ll i=0;i<n;i++){
+        ll x;cin>>x;
+        s.push(x);
     }
-    cout<<sum<<"\n";
+    while(!s.empty()){
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+    cout<<"\n";
 }
-
-
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
     ll t;t=1;
-    while(t--){
-        solve();
-    }
-} 
+    while(t--) solve();
+}
